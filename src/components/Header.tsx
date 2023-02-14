@@ -47,7 +47,7 @@ function Header() {
 			</button>
 
 			{!isMobileMenuOpened ? null : (
-				<ul className="absolute top-20 w-full md:hidden grid grid-cols-2 gap-4 px-4">
+				<ul className="absolute top-20 w-full md:hidden grid grid-cols-2 gap-4 px-4 bg-white">
 					<li className="">
 						<Link href="/program">
 							<button className="text-left text-sm border-b-2 border-yellow-500">Program</button>
