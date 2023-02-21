@@ -1,15 +1,52 @@
 // import Image from "next/image";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { DownOutlined } from "@ant-design/icons";
+import type { MenuProps } from "antd";
+import { Dropdown, message, Space } from "antd";
+
+const items: MenuProps["items"] = [
+	{
+		label: (
+			<Link href="/program/electrical-engineering">
+				<button className="text-left border-b-2 border-yellow-500">
+					Teknik Elektro
+				</button>
+			</Link>
+		),
+		key: "1",
+	},
+	{
+		label: (
+			<Link href="/program/informatics-and-computer-engineering">
+				<button className="text-left border-b-2 border-yellow-500">
+					Teknik Informatika dan Komputer
+				</button>
+			</Link>
+		),
+		key: "2",
+	},
+];
 
 function Header() {
 	const [isMobileMenuOpened, setMobileMenuOpened] = useState(false);
+	const [isOnTop, setOnTop] = useState<Boolean>(true);
 	const handleMobileMenuOpened = () => {
 		setMobileMenuOpened(!isMobileMenuOpened);
 	};
+
+	const handleScroll = () => {
+		if(window.scrollY) return setOnTop(true)
+		setOnTop(false);
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll);
+	});
+
 	return (
-		<nav className="w-full flex items-center justify-between md:justify-evenly md:gap-8">
+		<nav className={`w-full fixed z-10 flex items-center justify-between md:justify-evenly md:gap-8 duration-700 ${isOnTop ? "bg-blue-100" : ""}`}>
 			<div className="px-1 py-2">
 				<Link href="/">
 					<Image
@@ -49,28 +86,40 @@ function Header() {
 			{!isMobileMenuOpened ? null : (
 				<ul className="absolute top-20 w-full md:hidden grid grid-cols-2 gap-4 px-4 bg-white">
 					<li className="">
-						<Link href="/program">
-							<button className="text-left text-sm border-b-2 border-yellow-500">Program</button>
-						</Link>
+						<Dropdown menu={{ items }}>
+							<div>
+								<button className="text-left border-b-2 border-yellow-500 text-xs mr-2">
+									Program
+								</button>
+								<DownOutlined className="text-xs" />
+							</div>
+						</Dropdown>
 					</li>
 					<li className="">
 						<Link href="/lecturer-and-staff">
-							<button className="text-left text-sm border-b-2 border-yellow-500">
+							<button className="text-left text-xs border-b-2 border-yellow-500">
 								Dosen dan Staf
 							</button>
 						</Link>
 					</li>
 					<li className="">
 						<Link href="/research-and-innovations">
-							<button className="text-left text-sm border-b-2 border-yellow-500">
+							<button className="text-left text-xs border-b-2 border-yellow-500">
 								Riset dan Inovasi
 							</button>
 						</Link>
 					</li>
 					<li className="">
 						<Link href="/admissions">
-							<button className="text-left text-sm border-b-2 border-yellow-500">
+							<button className="text-left text-xs border-b-2 border-yellow-500">
 								Penerimaan Mahasiswa
+							</button>
+						</Link>
+					</li>
+					<li className="">
+						<Link href="/information">
+							<button className="text-left text-xs border-b-2 border-yellow-500">
+								Informasi
 							</button>
 						</Link>
 					</li>
@@ -98,25 +147,43 @@ function Header() {
 				</ul>
 			)}
 
-			<ul className="hidden flex flex-row gap-2 md:gap-4 text-xs xl:text-base text-gray-900 items-center md:flex">
+			<ul className="hidden flex flex-row gap-2 md:gap-4 text-xs text-gray-900 items-center md:flex">
 				<li className="">
-					<Link href="/program">
-						<button className="text-left border-b-2 border-yellow-500">Program</button>
-					</Link>
+					<Dropdown menu={{ items }}>
+						<div>
+							<button className="text-left border-b-2 border-yellow-500 text-xs mr-2">
+								Program
+							</button>
+							<DownOutlined className="text-xs" />
+						</div>
+					</Dropdown>
 				</li>
 				<li className="">
 					<Link href="/lecturer-and-staff">
-						<button className="text-left border-b-2 border-yellow-500">Dosen dan Staf</button>
+						<button className="text-left border-b-2 border-yellow-500">
+							Dosen dan Staf
+						</button>
 					</Link>
 				</li>
 				<li className="">
 					<Link href="/research-and-innovations">
-						<button className="text-left border-b-2 border-yellow-500">Riset dan Inovasi</button>
+						<button className="text-left border-b-2 border-yellow-500">
+							Riset dan Inovasi
+						</button>
 					</Link>
 				</li>
 				<li className="">
 					<Link href="/admissions">
-						<button className="text-left border-b-2 border-yellow-500">Penerimaan Mahasiswa</button>
+						<button className="text-left border-b-2 border-yellow-500">
+							Penerimaan Mahasiswa
+						</button>
+					</Link>
+				</li>
+				<li className="">
+					<Link href="/informasi">
+						<button className="text-left border-b-2 border-yellow-500">
+							Informasi
+						</button>
 					</Link>
 				</li>
 				<li className="flex  flex-row gap-4 ml-4 lg:ml-16">
