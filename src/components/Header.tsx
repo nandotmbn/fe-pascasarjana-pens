@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { DownOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
-import { Dropdown, message, Space } from "antd";
+import { Dropdown } from "antd";
 
 const items: MenuProps["items"] = [
 	{

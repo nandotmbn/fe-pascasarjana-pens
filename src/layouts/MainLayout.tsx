@@ -9,7 +9,7 @@ function MainLayout({ children }: IMainLayout) {
 	return (
 		<div>
 			<Header />
-			<div className="w-full flex justify-center pt-40">{children}</div>
+			<div className="w-full flex justify-center pt-16">{children}</div>
 		</div>
 	);
 }
