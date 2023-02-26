@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/google-font-display */
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
@@ -33,6 +34,7 @@ class MyDocument extends Document {
 						href="https://fonts.googleapis.com/icon?family=Material+Icons"
 						rel="stylesheet"
 					></link>
+					<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 				</Head>
 				<body className="bg-white">
 					<Main />

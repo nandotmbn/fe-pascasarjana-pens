@@ -4,17 +4,28 @@ import React from "react";
 
 function Jumbotron() {
 	return (
-		<div className="flex flex-row self-center bg-gray-50">
+		<div className="flex flex-row self-center bg-gray-100 border-b-8 border-yellow-400">
 			<div className="w-full flex-3">
 				<Image
 					className="contain w-full relative"
-					src="/pens_jumbotron.png"
-					alt="Logo Koridorlab"
+					src="/images/home/pens_jumbotron.png"
+					alt="Jumbotron PENS"
 					width={1960}
 					height={1}
 				/>
 			</div>
-			<div className="flex-2 flex-col h-full flex justify-center text-lg">
+			<div
+				className="flex-2 flex-col flex justify-center text-lg"
+				style={{
+					backgroundImage: `url('/images/Logo_PENS_White.png')`,
+					backgroundRepeat: "no-repeat",
+					backgroundSize: "contain",
+					backgroundPosition: "center",
+				}}
+			>
+				<div className="relative">
+					<div className="absolute right-2 w-44 h-12 bg-transparent border-t-8 border-r-8 border-yellow-400"></div>
+				</div>
 				<h2 className="text-6xl font-semibold">Selamat Datang</h2>
 				<span className="flex flex-row gap-2 text-lg">
 					<p>di</p>

@@ -54,7 +54,7 @@ function Header() {
 					<div className="flex flex-row items-center gap-4">
 						<Image
 							className="cursor-pointer hidden lg:inline"
-							src="/Logo_PENS_White.png"
+							src="/images/Logo_PENS_White.png"
 							alt="Logo PENS"
 							width={50}
 							height={300}
@@ -63,7 +63,7 @@ function Header() {
 					</div>
 					<Image
 						className="cursor-pointer lg:hidden"
-						src="/Logo_PENS_White.png"
+						src="/images/Logo_PENS_White.png"
 						alt="Logo PENS"
 						width={120}
 						height={20}
@@ -132,7 +132,7 @@ function Header() {
 						<button className="rounded-full text-white">
 							<Image
 								className="cursor-pointer"
-								src="/id.png"
+								src="/images/id.png"
 								alt="Logo Koridorlab"
 								width={40}
 								height={40}
@@ -142,7 +142,7 @@ function Header() {
 						<button className="rounded-full text-white">
 							<Image
 								className="cursor-pointer"
-								src="/en.png"
+								src="/images/en.png"
 								alt="Logo Koridorlab"
 								width={40}
 								height={40}
@@ -195,14 +195,14 @@ function Header() {
 					<button className="rounded-full text-white">
 						<Image
 							className="cursor-pointer md:inline lg:hidden"
-							src="/id.png"
+							src="/images/id.png"
 							alt="Bendera Indonesia"
 							width={20}
 							height={20}
 						/>
 						<Image
 							className="cursor-pointer hidden lg:inline"
-							src="/id.png"
+							src="/images/id.png"
 							alt="Bendera Indonesia"
 							width={40}
 							height={40}
@@ -212,14 +212,14 @@ function Header() {
 					<button className="rounded-full text-white">
 						<Image
 							className="cursor-pointer md:inline lg:hidden"
-							src="/en.png"
+							src="/images/en.png"
 							alt="Bendera Inggris"
 							width={20}
 							height={20}
 						/>
 						<Image
 							className="cursor-pointer hidden lg:inline"
-							src="/en.png"
+							src="/images/en.png"
 							alt="Bendera Inggris"
 							width={40}
 							height={40}
