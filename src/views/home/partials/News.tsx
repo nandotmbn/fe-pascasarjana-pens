@@ -47,7 +47,7 @@ function News() {
 				Berita Terbaru
 			</h2>
 			<div className="w-full flex flex-row">
-				<div className="relative flex-2">
+				<div className="relative flex-1">
 					<div className="absolute left-0 top-0">
 						<Image
 							className="contain w-full relative"
@@ -58,7 +58,7 @@ function News() {
 						/>
 					</div>
 				</div>
-				<div className="flex overflow-x-scroll py-10 hide-scroll-bar flex-8">
+				<div className="flex overflow-x-scroll py-10 hide-scroll-bar flex-9">
 					<div className="flex flex-nowrap ml-10 ">
 						<NewsCard />
 						<NewsCard />
@@ -69,6 +69,7 @@ function News() {
 						<NewsCard />
 					</div>
 				</div>
+        
 			</div>
 		</div>
 	);
