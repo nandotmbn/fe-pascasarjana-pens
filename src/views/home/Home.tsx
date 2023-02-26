@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React, { CSSProperties, useState } from "react";
 import LandingPage from "./partials/LandingPage";
 import SearchPanel from "./partials/SearchPanel";
@@ -18,8 +17,8 @@ function HomeViews() {
 
 			style={homeStyle}
 		>
-			<SearchPanel searchText={searchText} setSearchText={setSearchText} />
-			<LandingPage searchText={searchText} />
+			{/* <SearchPanel searchText={searchText} setSearchText={setSearchText} /> */}
+			{/* <LandingPage searchText={searchText} /> */}
 		</div>
 	);
 }
