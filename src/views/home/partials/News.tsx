@@ -69,7 +69,7 @@ function NewsCard({ isOdd }: NewsCardInterface) {
 
 function News() {
 	return (
-		<div className="mt-12">
+		<div className="mt-12 z-10">
 			<h2 className="text-2xl border-b-4 border-gray-300 text-center mb-4">
 				Berita Terbaru
 			</h2>

@@ -47,7 +47,7 @@ function Header() {
 
 	return (
 		<nav
-			className={`w-full fixed z-10 flex items-center justify-between md:justify-evenly md:gap-8 duration-700 bg-gradient-to-r to-blue-800 from-yellow-400 via-blue-800`}
+			className={`w-full fixed z-50 flex items-center justify-between md:justify-evenly md:gap-8 duration-700 bg-gradient-to-r to-blue-800 from-yellow-400 via-blue-800`}
 		>
 			<div className="px-1 py-2">
 				<Link href="/">
