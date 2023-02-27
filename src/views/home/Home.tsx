@@ -1,6 +1,5 @@
-import Footer from "@/components/Footer";
 import Image from "next/image";
-import React, { CSSProperties, useState } from "react";
+import React, { useState } from "react";
 import Announcements from "./partials/Announcements";
 import Jumbotron from "./partials/Jumbotron";
 import News from "./partials/News";
@@ -36,7 +35,6 @@ function HomeViews() {
 				</div>
 			</div>
 			<Videotron />
-			<Footer />
 		</div>
 	);
 }

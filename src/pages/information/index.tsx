@@ -1,11 +1,12 @@
-import Head from "next/head";
 import MainLayout from "@/layouts/MainLayout";
+import Head from "next/head";
+import React from "react";
 
-export default function Home() {
+function Information() {
 	return (
 		<>
 			<Head>
-				<title>Pascasarjana PENS</title>
+				<title>Pascasarjana PENS | Informations</title>
 				<meta
 					name="description"
 					content="Pascasarjana Politeknik Elektronika Negeri Surabaya"
@@ -14,11 +15,10 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<MainLayout>
-				<div className="flex flex-col items-center justify-center my-48">
-          <p>404</p>
-					<p>Page is Not Found</p>
-				</div>
+				<div></div>
 			</MainLayout>
 		</>
 	);
 }
+
+export default Information;

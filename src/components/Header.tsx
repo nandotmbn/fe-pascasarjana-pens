@@ -185,7 +185,7 @@ function Header() {
 					</Link>
 				</li>
 				<li className="flex-1 border-b-2 border-yellow-500">
-					<Link href="/informasi">
+					<Link href="/information">
 						<button className="text-left">
 							Informasi
 						</button>
