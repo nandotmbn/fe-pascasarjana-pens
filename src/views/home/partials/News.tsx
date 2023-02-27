@@ -1,11 +1,18 @@
+import { NewsCardInterface } from "@/interfaces/home";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-function NewsCard() {
+const news = [0, 1, 2, 3, 4, 5, 6];
+
+function NewsCard({ isOdd }: NewsCardInterface) {
 	return (
 		<div className="inline-block px-3">
-			<div className="w-64 max-w-xs overflow-hidden rounded-lg drop-shadow-xl bg-blue-800 hover:drop-shadow-2xl transition-shadow duration-300 ease-in-out border-t-4 border-t-blue-800 border-r-4 border-r-yellow-400 py-8 flex flex-col justify-between">
+			<div
+				className={`w-64 max-w-xs overflow-hidden rounded-lg hover:drop-shadow-2xl transition-shadow duration-300 ease-in-out py-8 flex flex-col justify-between ${
+					isOdd ? "bg-blue-800" : "bg-yellow-400"
+				}`}
+			>
 				<div className="flex-2">
 					<Image
 						className="contain w-full relative"
@@ -15,25 +22,45 @@ function NewsCard() {
 						height={1}
 					/>
 				</div>
-        <div className="flex-4 p-2">
-          <div className="flex flex-row gap-1 mt-2">
-            <div className="w-2 h-2 rounded-full bg-white"></div>
-            <div className="w-2 h-2 rounded-full bg-white"></div>
-            <div className="w-2 h-2 rounded-full bg-white"></div>
-          </div>
-          <h5 className="font-semibold text-xl text-white">
+				<div className="flex-4 p-2">
+					<div className="flex flex-row gap-1 mt-2">
+						<div className="w-2 h-2 rounded-full bg-white"></div>
+						<div className="w-2 h-2 rounded-full bg-white"></div>
+						<div className="w-2 h-2 rounded-full bg-white"></div>
+					</div>
+					<h5
+						className={`font-semibold text-xl ${
+							isOdd ? "text-white" : "text-gray-800"
+						}`}
+					>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					</h5>
-        </div>
+				</div>
 				<div className="self-end flex-1 p-2">
 					<Link href="/article" className="flex flex-row items-center gap-2">
-						<p className="text-white text-sm">Baca Selengkapnya...</p>
-						<button className="w-6 h-6 rounded-full bg-white">
+						<p className={`text-sm ${isOdd ? "text-white" : "text-gray-800"}`}>
+							Baca Selengkapnya...
+						</p>
+						<button
+							className={`w-6 h-6 rounded-full ${
+								isOdd ? "bg-white" : "bg-gray-800"
+							}`}
+						>
 							<span className="material-symbols-outlined text-yellow-400">
 								chevron_right
 							</span>
 						</button>
 					</Link>
+				</div>
+				<div className="relative">
+					<div
+						className={`absolute right-0 top-0 h-8 w-8 rounded-br-lg rounded-tl-lg ${
+							isOdd ? "bg-yellow-400" : "bg-blue-800"
+						}`}
+					></div>
+					<div
+						className={`absolute -right-12 top-0 h-16 w-16 rounded-br-lg rounded-tl-lg rotate-45 bg-gray-50`}
+					></div>
 				</div>
 			</div>
 		</div>
@@ -60,16 +87,11 @@ function News() {
 				</div>
 				<div className="flex overflow-x-scroll py-10 hide-scroll-bar flex-9">
 					<div className="flex flex-nowrap ml-10 ">
-						<NewsCard />
-						<NewsCard />
-						<NewsCard />
-						<NewsCard />
-						<NewsCard />
-						<NewsCard />
-						<NewsCard />
+						{news.map((e: any, i: number) => {
+							return <NewsCard key={i} isOdd={i % 2 == 0 ? true : false} />;
+						})}
 					</div>
 				</div>
-        
 			</div>
 		</div>
 	);

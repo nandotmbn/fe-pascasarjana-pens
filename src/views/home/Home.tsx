@@ -33,6 +33,7 @@ function HomeViews() {
 					/>
 				</div>
 			</div>
+			{/* <News /> */}
 		</div>
 	);
 }
