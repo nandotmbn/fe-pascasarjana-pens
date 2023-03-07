@@ -1,4 +1,5 @@
 import MainLayout from "@/layouts/MainLayout";
+import AboutView from "@/views/about/About";
 import Head from "next/head";
 import React from "react";
 
@@ -15,7 +16,7 @@ function About() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<MainLayout>
-				<div></div>
+				<AboutView />
 			</MainLayout>
 		</>
 	);
