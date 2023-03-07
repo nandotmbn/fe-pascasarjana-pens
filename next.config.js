@@ -1,7 +1,9 @@
 const withImages = require("next-images");
-
-module.exports = withImages({
-	images: {
-		disableStaticImages: true,
-	},
-});
+const removeImports = require("next-remove-imports")();
+module.exports = removeImports(
+	withImages({
+		images: {
+			disableStaticImages: true,
+		},
+	})
+);

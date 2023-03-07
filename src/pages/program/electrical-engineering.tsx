@@ -2,6 +2,7 @@ import Head from "next/head";
 import MainLayout from "@/layouts/MainLayout";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import ElectricalEngineeringView from "@/views/programs/electrical-engineering/ElectricalEngineering";
 
 export default function ElectricalEngineering() {
 	return (
@@ -16,7 +17,7 @@ export default function ElectricalEngineering() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<MainLayout>
-				<div></div>
+				<ElectricalEngineeringView />
 			</MainLayout>
 		</>
 	);

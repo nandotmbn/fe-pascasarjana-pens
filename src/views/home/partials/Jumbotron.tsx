@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-function Jumbotron() {
+function HomeJumbotron() {
 	return (
 		<div className="flex flex-row self-center bg-gray-100 border-b-8 border-yellow-400">
 			<div className="w-full flex-3">
@@ -47,4 +47,4 @@ function Jumbotron() {
 	);
 }
 
-export default Jumbotron;
+export default HomeJumbotron;

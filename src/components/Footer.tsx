@@ -40,7 +40,7 @@ function Footer() {
           <Link href="/">
             <p>Terms and Condition</p>
           </Link>
-          <Link href="/">
+          <Link href="/admin">
             <p>Administrator</p>
           </Link>
         </div>

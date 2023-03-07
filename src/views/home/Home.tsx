@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Announcements from "./partials/Announcements";
-import Jumbotron from "./partials/Jumbotron";
+import HomeJumbotron from "./partials/Jumbotron";
 import News from "./partials/News";
 import Videotron from "./partials/Videotron";
 
@@ -9,7 +9,7 @@ function HomeViews() {
 	const [searchText, setSearchText] = useState("");
 	return (
 		<div className={`w-full flex flex-col`}>
-			<Jumbotron />
+			<HomeJumbotron />
 			<Announcements />
 			<div className="relative">
 				<div className="absolute right-0 -top-2">
