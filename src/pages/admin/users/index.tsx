@@ -15,7 +15,7 @@ function Admin() {
 	const router = useRouter();
 	useEffect(() => {
 		if (typeof window === "undefined") return;
-		router.replace("/admin/users/biodata");
+		router.replace("/admin/users/list");
 	}, [router]);
 	return (
 		<>
