@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-function Footer() {
+function FooterMainLayout() {
 	return (
 		<div className="h-72 bg-gray-50 border-r-8 border-r-blue-800 border-t-8 border-t-yellow-400 w-full flex flex-row px-24 py-12 gap-8">
 			<div className="flex-1 flex items-center">
@@ -49,4 +49,4 @@ function Footer() {
 	);
 }
 
-export default Footer;
+export default FooterMainLayout;

@@ -1,5 +1,4 @@
-import { Header } from "@/components";
-import Footer from "@/components/Footer";
+import { HeaderMainLayout, FooterMainLayout } from "@/components";
 import React from "react";
 
 interface IMainLayout {
@@ -9,9 +8,9 @@ interface IMainLayout {
 function MainLayout({ children }: IMainLayout) {
 	return (
 		<div>
-			<Header />
+			<HeaderMainLayout />
 			<div className="w-full flex justify-center pt-16">{children}</div>
-			<Footer />
+			<FooterMainLayout />
 		</div>
 	);
 }

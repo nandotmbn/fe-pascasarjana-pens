@@ -29,7 +29,7 @@ const items: MenuProps["items"] = [
 	},
 ];
 
-function Header() {
+function HeaderMainLayout() {
 	const [isMobileMenuOpened, setMobileMenuOpened] = useState(false);
 	const [isOnTop, setOnTop] = useState<Boolean>(false);
 	const handleMobileMenuOpened = () => {
@@ -231,4 +231,4 @@ function Header() {
 	);
 }
 
-export default Header;
+export default HeaderMainLayout;

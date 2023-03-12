@@ -1,3 +1,5 @@
-import Header from "./Header";
+import HeaderMainLayout from "./MainLayout/Header";
+import FooterMainLayout from "./MainLayout/Footer";
+import HeaderAdministratorLayout from "./AdministratorLayout/Header";
 
-export { Header };
+export { HeaderMainLayout, FooterMainLayout, HeaderAdministratorLayout };

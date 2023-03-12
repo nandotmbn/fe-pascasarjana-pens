@@ -12,15 +12,10 @@ const MDEditor: any = dynamic(() => import("@uiw/react-md-editor"), {
 
 function Admin() {
 	const [value, setValue] = useState("**Hello world!!!**");
-	const router = useRouter();
-	useEffect(() => {
-		if (typeof window === "undefined") return;
-		router.replace("/admin/users/biodata");
-	}, [router]);
 	return (
 		<>
 			<Head>
-				<title>Pascasarjana PENS | Administrator</title>
+				<title>Pascasarjana PENS | Biodata</title>
 				<meta
 					name="description"
 					content="Administrator Page of Pascasarjana Politeknik Elektronika Negeri Surabaya"
