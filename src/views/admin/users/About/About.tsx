@@ -3,7 +3,7 @@ import React from "react";
 import UserAbout from "./partials/UserAbout";
 import BiodataUserList from "./partials/UserList";
 
-function AboutViews() {
+function AdminAboutViews() {
 	return (
 		<div className="h-full">
 			<Breadcrumb
@@ -26,4 +26,4 @@ function AboutViews() {
 	);
 }
 
-export default AboutViews;
+export default AdminAboutViews;

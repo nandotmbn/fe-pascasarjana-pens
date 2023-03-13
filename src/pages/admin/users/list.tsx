@@ -1,13 +1,6 @@
-import "@uiw/react-md-editor/markdown-editor.css";
-import "@uiw/react-markdown-preview/markdown.css";
-import dynamic from "next/dynamic";
 import Head from "next/head";
 import AdministratorLayout from "@/layouts/AdministratorLayout";
-import ListViews from "@/views/admin/users/List/List";
-
-const MDEditor: any = dynamic(() => import("@uiw/react-md-editor"), {
-	ssr: false,
-});
+import AdminListViews from "@/views/admin/users/List/List";
 
 function Admin() {
 	return (
@@ -22,9 +15,8 @@ function Admin() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<AdministratorLayout>
-				<ListViews />
+				<AdminListViews />
 			</AdministratorLayout>
-			{/* <MDEditor value={value} onChange={setValue} /> */}
 		</>
 	);
 }

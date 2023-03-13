@@ -3,7 +3,7 @@ import React from "react";
 import UserBiodata from "./partials/UserBiodata";
 import BiodataUserList from "./partials/UserList";
 
-function BiodataViews() {
+function AdminBiodataViews() {
 	return (
 		<div className="h-full">
 			<Breadcrumb
@@ -26,4 +26,4 @@ function BiodataViews() {
 	);
 }
 
-export default BiodataViews;
+export default AdminBiodataViews;

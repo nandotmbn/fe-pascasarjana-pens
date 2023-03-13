@@ -1,17 +1,8 @@
-import "@uiw/react-md-editor/markdown-editor.css";
-import "@uiw/react-markdown-preview/markdown.css";
-import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
 import Head from "next/head";
 import AdministratorLayout from "@/layouts/AdministratorLayout";
-import { useRouter } from "next/router";
-
-const MDEditor: any = dynamic(() => import("@uiw/react-md-editor"), {
-	ssr: false,
-});
+import AdminInformationViews from "@/views/admin/contents/Information/Information";
 
 function Admin() {
-	const [value, setValue] = useState("**Hello world!!!**");
 	return (
 		<>
 			<Head>
@@ -24,9 +15,8 @@ function Admin() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<AdministratorLayout>
-				<div></div>
+				<AdminInformationViews />
 			</AdministratorLayout>
-			{/* <MDEditor value={value} onChange={setValue} /> */}
 		</>
 	);
 }

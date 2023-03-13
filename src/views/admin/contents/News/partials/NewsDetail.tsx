@@ -4,19 +4,20 @@ import dynamic from "next/dynamic";
 import React, { useState } from "react";
 import * as commands from "@uiw/react-md-editor/lib/commands";
 import { imageUpload } from "@/services";
+import { markkdownInit } from "@/constants";
 
 const MDEditor: any = dynamic(() => import("@uiw/react-md-editor"), {
 	ssr: false,
 });
 
-function UserAbout() {
-	const [value, setValue] = useState("**Hello world!!!**");
+function NewsDetail() {
+	const [value, setValue] = useState(markkdownInit);
 
 	return (
-		<div className="h-full w-full flex-3 flex flex-col">
-			<h2 className="mb-4 text-xl font-semibold flex-1">Tentang Pengguna</h2>
+		<div className="h-full w-full flex-5 flex flex-col">
+			<h2 className="mb-4 text-xl font-semibold flex-1">Detail Berita</h2>
 			<div className="relative h-full flex-12">
-				<div className="no-prose overflow-y-scroll text-xs absolute inset-0 scrollbar scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-blue-100">
+				<div className="prose-ol:list-decimal prose-ul:list-disc prose-li overflow-y-scroll text-xs absolute inset-0 scrollbar scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-blue-100">
 					<MDEditor
 						value={value}
 						onChange={setValue}
@@ -85,4 +86,4 @@ function UserAbout() {
 	);
 }
 
-export default UserAbout;
+export default NewsDetail;

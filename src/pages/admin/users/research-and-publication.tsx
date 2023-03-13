@@ -1,18 +1,11 @@
 import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
-import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
 import Head from "next/head";
 import AdministratorLayout from "@/layouts/AdministratorLayout";
-import { useRouter } from "next/router";
-import ResearchAndPublicationViews from "@/views/admin/users/ResearchAndPublication/ResearchAndPublication";
+import AdminResearchAndPublicationViews from "@/views/admin/users/ResearchAndPublication/ResearchAndPublication";
 
-const MDEditor: any = dynamic(() => import("@uiw/react-md-editor"), {
-	ssr: false,
-});
 
 function Admin() {
-	const [value, setValue] = useState("**Hello world!!!**");
 	return (
 		<>
 			<Head>
@@ -25,9 +18,8 @@ function Admin() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<AdministratorLayout>
-				<ResearchAndPublicationViews />
+				<AdminResearchAndPublicationViews />
 			</AdministratorLayout>
-			{/* <MDEditor value={value} onChange={setValue} /> */}
 		</>
 	);
 }

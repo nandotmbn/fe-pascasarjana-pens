@@ -4,7 +4,7 @@ import AddUserPanel from "./partials/AddUserPanel";
 import ControlPanelList from "./partials/ControlPanel";
 import BiodataUserList from "./partials/UserList";
 
-function ListViews() {
+function AdminListViews() {
 	const [isModalOpened, setModalOpened] = useState(false);
 	return (
 		<div className="h-full">
@@ -40,4 +40,4 @@ function ListViews() {
 	);
 }
 
-export default ListViews;
+export default AdminListViews;

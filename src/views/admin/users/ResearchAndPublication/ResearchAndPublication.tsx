@@ -4,7 +4,7 @@ import AddUserResearchAndPublicationPanel from "./partials/AddUserResearchAndPub
 import UserResearchAndPublication from "./partials/UserResearchAndPublication";
 import BiodataUserList from "./partials/UserList";
 
-function ResearchAndPublicationViews() {
+function AdminResearchAndPublicationViews() {
 	const [isModalOpened, setModalOpened] = useState(false);
 
 	return (
@@ -41,4 +41,4 @@ function ResearchAndPublicationViews() {
 	);
 }
 
-export default ResearchAndPublicationViews;
+export default AdminResearchAndPublicationViews;

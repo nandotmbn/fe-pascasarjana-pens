@@ -4,7 +4,7 @@ import AddUserEducationPanel from "./partials/AddUserEducationPanel";
 import UserEducation from "./partials/UserEducation";
 import BiodataUserList from "./partials/UserList";
 
-function EducationViews() {
+function AdminEducationViews() {
 	const [isModalOpened, setModalOpened] = useState(false);
 
 	return (
@@ -41,4 +41,4 @@ function EducationViews() {
 	);
 }
 
-export default EducationViews;
+export default AdminEducationViews;
