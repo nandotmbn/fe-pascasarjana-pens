@@ -41,8 +41,8 @@ function NavigationBarAdministratorLayout() {
 				setFocusedNav("education");
 			else if (router.route.split("/")[3] == "research-and-publication")
 				setFocusedNav("research-and-publication");
-			else if (router.route.split("/")[3] == "website")
-				setFocusedNav("website");
+			else if (router.route.split("/")[3] == "about")
+				setFocusedNav("about");
 			else if (router.route.split("/")[3] == "list") setFocusedNav("list");
 		} else if (router.route.split("/")[2] == "contents") {
 			if (router.route.split("/")[3] == "information")
@@ -114,14 +114,14 @@ function NavigationBarAdministratorLayout() {
 								<p className="text-xs ml-1">Riset dan Publikasi</p>
 							</div>
 						</Link>
-						<Link href="/admin/users/website">
+						<Link href="/admin/users/about">
 							<div
 								className={`flex flex-row items-center justify-start mb-1 hover:bg-gray-400 rounded-full px-2 hover:text-white ${focusedHandler(
-									"website"
+									"about"
 								)}`}
 							>
 								<GlobalOutlined className="text-sm" />
-								<p className="text-xs ml-1">Website</p>
+								<p className="text-xs ml-1">Tentang</p>
 							</div>
 						</Link>
 					</Panel>

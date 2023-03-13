@@ -9,7 +9,7 @@ function HeaderAdministratorLayout() {
 				className="flex flex-row flex-1 px-4 py-2 items-center justify-between"
 			>
 				<Image
-					className="cursor-pointer hidden lg:inline flex-2"
+					className="cursor-pointer inline flex-2"
 					src="/images/pens-long-logo.png"
 					alt="Logo PENS"
 					width={200}

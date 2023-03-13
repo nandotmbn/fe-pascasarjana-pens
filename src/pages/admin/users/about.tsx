@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import AdministratorLayout from "@/layouts/AdministratorLayout";
 import { useRouter } from "next/router";
+import AboutViews from "@/views/admin/users/About/About";
 
 const MDEditor: any = dynamic(() => import("@uiw/react-md-editor"), {
 	ssr: false,
@@ -15,7 +16,7 @@ function Admin() {
 	return (
 		<>
 			<Head>
-				<title>Pascasarjana PENS | Website</title>
+				<title>Pascasarjana PENS | About</title>
 				<meta
 					name="description"
 					content="Administrator Page of Pascasarjana Politeknik Elektronika Negeri Surabaya"
@@ -24,7 +25,7 @@ function Admin() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<AdministratorLayout>
-				<div></div>
+				<AboutViews />
 			</AdministratorLayout>
 			{/* <MDEditor value={value} onChange={setValue} /> */}
 		</>
