@@ -16,7 +16,7 @@ function Admin() {
 	return (
 		<>
 			<Head>
-				<title>Pascasarjana PENS | Education</title>
+				<title>Pascasarjana PENS | Admin | Users Education</title>
 				<meta
 					name="description"
 					content="Administrator Page of Pascasarjana Politeknik Elektronika Negeri Surabaya"

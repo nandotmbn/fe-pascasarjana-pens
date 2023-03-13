@@ -42,8 +42,9 @@ function NavigationBarAdministratorLayout() {
 			else if (router.route.split("/")[3] == "research-and-publication")
 				setFocusedNav("research-and-publication");
 			else if (router.route.split("/")[3] == "about")
-				setFocusedNav("about");
-			else if (router.route.split("/")[3] == "list") setFocusedNav("list");
+				setFocusedNav("about-users");
+			else if (router.route.split("/")[3] == "list") setFocusedNav("list-of-users");
+
 		} else if (router.route.split("/")[2] == "contents") {
 			if (router.route.split("/")[3] == "information")
 				setFocusedNav("information");
@@ -51,8 +52,17 @@ function NavigationBarAdministratorLayout() {
 			else if (router.route.split("/")[3] == "document")
 				setFocusedNav("document");
 			setOpenedNav("2");
-		} else if (router.route.split("/")[3] == "research-and-innovations") {
+		} else if (router.route.split("/")[2] == "research-and-innovations") {
 			setOpenedNav("3");
+			if (router.route.split("/")[3] == "list") setFocusedNav("list-of-research-and-innovations");
+			else if (router.route.split("/")[3] == "detail")
+				setFocusedNav("detail");
+			else if (router.route.split("/")[3] == "innovation")
+				setFocusedNav("innovation");
+			else if (router.route.split("/")[3] == "news")
+				setFocusedNav("news-of-research-and-innovations");
+			else if (router.route.split("/")[3] == "about-research-and-innovations")
+				setFocusedNav("about");
 		}
 
 		setMounted(true);
@@ -125,6 +135,8 @@ function NavigationBarAdministratorLayout() {
 							</div>
 						</Link>
 					</Panel>
+
+
 					<Panel
 						header={
 							<div className="flex flex-row items-center justify-start">
@@ -165,6 +177,8 @@ function NavigationBarAdministratorLayout() {
 							</div>
 						</Link>
 					</Panel>
+
+
 					<Panel
 						header={
 							<div className="flex flex-row items-center justify-start">
@@ -174,54 +188,54 @@ function NavigationBarAdministratorLayout() {
 						}
 						key="3"
 					>
-						<Link href="/admin/research-and-innovations/electric-vehicle">
+						<Link href="/admin/research-and-innovations/list">
 							<div
 								className={`flex flex-row items-center justify-start mb-1 hover:bg-gray-400 rounded-full px-2 hover:text-white ${focusedHandler(
-									""
+									"list-of-research-and-innovations"
 								)}`}
 							>
-								<FundProjectionScreenOutlined className="text-sm" />
-								<p className="text-xs ml-1">Electric Vehicle</p>
+								<UnorderedListOutlined className="text-sm" />
+								<p className="text-xs ml-1">Daftar</p>
 							</div>
 						</Link>
-						<Link href="/admin/research-and-innovations/applied-aquaculture">
+						<Link href="/admin/research-and-innovations/detail">
 							<div
 								className={`flex flex-row items-center justify-start mb-1 hover:bg-gray-400 rounded-full px-2 hover:text-white ${focusedHandler(
-									""
+									"detail"
 								)}`}
 							>
-								<FundProjectionScreenOutlined className="text-sm" />
-								<p className="text-xs ml-1">Aquaculture</p>
+								<ContainerOutlined className="text-sm" />
+								<p className="text-xs ml-1">Detail</p>
 							</div>
 						</Link>
-						<Link href="/admin/research-and-innovations/medical-electronics">
+						<Link href="/admin/research-and-innovations/news">
 							<div
 								className={`flex flex-row items-center justify-start mb-1 hover:bg-gray-400 rounded-full px-2 hover:text-white ${focusedHandler(
-									""
+									"news-of-research-and-innovations"
 								)}`}
 							>
-								<FundProjectionScreenOutlined className="text-sm" />
-								<p className="text-xs ml-1">Electromedic</p>
+								<FlagOutlined className="text-sm" />
+								<p className="text-xs ml-1">Berita</p>
 							</div>
 						</Link>
-						<Link href="/admin/research-and-innovations/robotics">
+						<Link href="/admin/research-and-innovations/innovation">
 							<div
 								className={`flex flex-row items-center justify-start mb-1 hover:bg-gray-400 rounded-full px-2 hover:text-white ${focusedHandler(
-									""
+									"innovation"
 								)}`}
 							>
-								<FundProjectionScreenOutlined className="text-sm" />
-								<p className="text-xs ml-1">Robotics</p>
+								<FireOutlined className="text-sm" />
+								<p className="text-xs ml-1">Inovasi</p>
 							</div>
 						</Link>
-						<Link href="/admin/research-and-innovations/indusrial-electronics">
+						<Link href="/admin/research-and-innovations/about">
 							<div
 								className={`flex flex-row items-center justify-start mb-1 hover:bg-gray-400 rounded-full px-2 hover:text-white ${focusedHandler(
-									""
+									"about-research-and-innovations"
 								)}`}
 							>
-								<FundProjectionScreenOutlined className="text-sm" />
-								<p className="text-xs ml-1">Industrial Electronics</p>
+								<GlobalOutlined className="text-sm" />
+								<p className="text-xs ml-1">Tentang</p>
 							</div>
 						</Link>
 					</Panel>

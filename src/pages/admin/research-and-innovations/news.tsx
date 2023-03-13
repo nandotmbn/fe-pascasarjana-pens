@@ -1,12 +1,12 @@
 import Head from "next/head";
 import AdministratorLayout from "@/layouts/AdministratorLayout";
-import AdminListViews from "@/views/admin/users/List/List";
+import AdminAboutViews from "@/views/admin/users/About/About";
 
 function Admin() {
 	return (
 		<>
 			<Head>
-			<title>Pascasarjana PENS | Admin | Users List</title>
+				<title>Pascasarjana PENS | Admin | News of Research and Innovation</title>
 				<meta
 					name="description"
 					content="Administrator Page of Pascasarjana Politeknik Elektronika Negeri Surabaya"
@@ -15,7 +15,7 @@ function Admin() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<AdministratorLayout>
-				<AdminListViews />
+				<AdminAboutViews />
 			</AdministratorLayout>
 		</>
 	);

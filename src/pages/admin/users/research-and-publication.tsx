@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import "@uiw/react-md-editor/markdown-editor.css";
 import "@uiw/react-markdown-preview/markdown.css";
 import Head from "next/head";
@@ -9,7 +10,7 @@ function Admin() {
 	return (
 		<>
 			<Head>
-				<title>Pascasarjana PENS | Research and Publications</title>
+				<title>Pascasarjana PENS | Admin | Users Research and Publications</title>
 				<meta
 					name="description"
 					content="Administrator Page of Pascasarjana Politeknik Elektronika Negeri Surabaya"
