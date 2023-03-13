@@ -3,7 +3,7 @@ import React from "react";
 
 function UserBiodata() {
 	return (
-		<div className="h-full w-full flex-1 xl:flex-2 flex flex-col">
+		<div className="h-full w-full flex-1 flex flex-col">
 			<h2 className="mb-4 text-xl font-semibold flex-1">Biodata Pengguna</h2>
 			<div className="relative h-full flex-12">
 				<div className="overflow-y-scroll absolute inset-0 scrollbar scrollbar-thin scrollbar-thumb-gray-900 scrollbar-track-blue-100">
@@ -14,7 +14,7 @@ function UserBiodata() {
 								id="firstName"
 								name="firstName"
 								placeholder="Nama Depan"
-								defaultValue="Agus Indra"
+								defaultValue="John"
 							/>
 						</div>
 						<div className="mb-2">
@@ -23,7 +23,7 @@ function UserBiodata() {
 								id="lastName"
 								name="lastName"
 								placeholder="Nama Belakang"
-								defaultValue="Gunawan"
+								defaultValue="Doe"
 							/>
 						</div>
 						<div className="mb-2">

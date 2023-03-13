@@ -4,7 +4,8 @@ import React from "react";
 const dataSource = [
 	{
 		key: "1",
-		name: "Agus Indra Gunawan",
+		name: "John Doe",
+		role: "Dosen",
 		id: "1",
 	},
 ];
@@ -14,6 +15,11 @@ const columns = [
 		title: "Nama",
 		dataIndex: "name",
 		key: "name",
+	},
+	{
+		title: "Role",
+		dataIndex: "role",
+		key: "role",
 	},
 	{
 		title: "Aksi",
